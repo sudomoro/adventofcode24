@@ -1,5 +1,6 @@
 from DayOneAnalysis import ReportComparisonAnalyzer 
 from DayTwoAnalysis import ReportSafetyAnalyzer
+from DayThreeAnalysis import MultiplicationAnalysis
 # Main Logic
 if __name__ == "__main__":
     # Day One Analysis
@@ -17,3 +18,11 @@ if __name__ == "__main__":
     print("\nDay Two Results:")
     print(f"Safe reports without dampener: {safe_reports_count}")
     print(f"Safe reports with dampener: {safe_reports_with_dampener_count}")
+
+    # Day Three Analysis
+    day_three = MultiplicationAnalysis("day_three.txt")
+    sum_valid_muls, sum_valid_enabled_muls = day_three.analyze()
+
+    print("\nDay Three Results:")
+    print(f"Sum of valid multiplications: {sum_valid_muls}")
+    print(f"Sum of valid enabled multiplications: {sum_valid_enabled_muls}")
